@@ -1,0 +1,162 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-29 11:40:37.475999",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "details_tab",
+  "date",
+  "product",
+  "targeted_country",
+  "status",
+  "reason_of_suspend",
+  "column_break_dvkn3",
+  "market",
+  "arabic_name",
+  "english_name",
+  "attachments_section",
+  "images",
+  "market_attachment",
+  "details",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "product",
+   "fieldtype": "Link",
+   "label": "Product",
+   "options": "Product"
+  },
+  {
+   "fieldname": "targeted_country",
+   "fieldtype": "Link",
+   "label": "Targeted Country",
+   "options": "Countries"
+  },
+  {
+   "fieldname": "column_break_dvkn3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "market",
+   "fieldtype": "Link",
+   "label": "Market",
+   "options": "Market"
+  },
+  {
+   "fieldname": "arabic_name",
+   "fieldtype": "Data",
+   "label": "Arabic Name"
+  },
+  {
+   "fieldname": "english_name",
+   "fieldtype": "Data",
+   "label": "English Name"
+  },
+  {
+   "fieldname": "attachments_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "images",
+   "fieldtype": "Table",
+   "label": "Images",
+   "options": "Image"
+  },
+  {
+   "fieldname": "market_attachment",
+   "fieldtype": "Table",
+   "label": "Market Attachment",
+   "options": "Market Attachment"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Text Editor",
+   "label": "Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Market Product",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Potential",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nPotential\nIn Progress\nActive\nInactive\nSuspended"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Suspended'",
+   "fieldname": "reason_of_suspend",
+   "fieldtype": "Data",
+   "label": "Reason Of Suspend"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Market Follow Up",
+   "link_fieldname": "market_product"
+  },
+  {
+   "link_doctype": "Technical Delegations",
+   "link_fieldname": "market_product"
+  },
+  {
+   "link_doctype": "Cooperation Agreements",
+   "link_fieldname": "market_product"
+  },
+  {
+   "link_doctype": "External Achievements",
+   "link_fieldname": "market_product"
+  },
+  {
+   "link_doctype": "Protocol",
+   "link_fieldname": "market_product"
+  }
+ ],
+ "modified": "2024-07-03 09:46:25.747858",
+ "modified_by": "Administrator",
+ "module": "Aec",
+ "name": "Market Product",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
