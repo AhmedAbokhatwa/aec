@@ -1,0 +1,176 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-20 11:24:20.391463",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "mission_type",
+  "country",
+  "number_of_arrivals",
+  "market",
+  "column_break_7ttac",
+  "mission_start_date",
+  "mission_end_date",
+  "status",
+  "market_product",
+  "section_break_g0eya",
+  "mission_program",
+  "section_break_si2rl",
+  "buyers_info",
+  "mission_members",
+  "employee_mission",
+  "requirements_tab",
+  "required_by",
+  "required_for_mission",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "mission_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Mission Type",
+   "options": "\nTrade Mission\nBuyer Mission"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country",
+   "options": "Countries"
+  },
+  {
+   "fieldname": "mission_start_date",
+   "fieldtype": "Date",
+   "label": "Mission Start Date"
+  },
+  {
+   "fieldname": "mission_end_date",
+   "fieldtype": "Date",
+   "label": "Mission End Date"
+  },
+  {
+   "fieldname": "number_of_arrivals",
+   "fieldtype": "Int",
+   "label": "Number of Arrivals"
+  },
+  {
+   "fieldname": "required_for_mission",
+   "fieldtype": "Table",
+   "label": "Required For Mission",
+   "options": "Material Request Item"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nOpen\nClosed"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Missions",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Missions",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "requirements_tab",
+   "fieldtype": "Tab Break",
+   "label": "Requirements"
+  },
+  {
+   "fieldname": "buyers_info",
+   "fieldtype": "Table",
+   "label": "Buyers Info",
+   "options": "Buyers Info"
+  },
+  {
+   "fieldname": "mission_members",
+   "fieldtype": "Table",
+   "label": "Mission Members",
+   "options": "Mission Members"
+  },
+  {
+   "fieldname": "employee_mission",
+   "fieldtype": "Table",
+   "label": "Employee Mission",
+   "options": "Employee Mission"
+  },
+  {
+   "fieldname": "column_break_7ttac",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_si2rl",
+   "fieldtype": "Section Break",
+   "label": "Mission Details"
+  },
+  {
+   "fieldname": "section_break_g0eya",
+   "fieldtype": "Section Break",
+   "label": "Program"
+  },
+  {
+   "fieldname": "mission_program",
+   "fieldtype": "Table",
+   "label": "Mission Program",
+   "options": "Mission Program"
+  },
+  {
+   "fieldname": "required_by",
+   "fieldtype": "Date",
+   "label": "Required By"
+  },
+  {
+   "fieldname": "market",
+   "fieldtype": "Link",
+   "label": "Market",
+   "options": "Market"
+  },
+  {
+   "fieldname": "market_product",
+   "fieldtype": "Link",
+   "label": "Market Product",
+   "options": "Market Product"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-10-20 15:50:09.834622",
+ "modified_by": "Administrator",
+ "module": "Aec",
+ "name": "Missions",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
