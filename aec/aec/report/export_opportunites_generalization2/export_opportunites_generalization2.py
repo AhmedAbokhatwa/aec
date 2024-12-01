@@ -108,10 +108,10 @@ def get_data(filters):
         conditions.append("`tabCustomer`.`name` IS NOT NULL")
     if country:
         conditions.append(
-            "`tabVolume Of Member Exports`.`country_in_arabic` IN %(country)s"
+            "`tabVolume Of Member Exports`.`country_in_arabic` = %(country)s"
         )
     if clusters:
-        conditions.append("`tabCountries`.`geographical_clusters_name` IN %(clusters)s")
+        conditions.append("`tabCountries`.`geographical_clusters_name` = %(clusters)s")
     if custom_name_of_the_cioowner_of_the_company:
         conditions.append(
             "`tabCustomer`.`custom_name_of_the_cioowner_of_the_company` = %(custom_name_of_the_cioowner_of_the_company)s"
@@ -160,6 +160,10 @@ def get_data(filters):
         {conditions_str}
         GROUP BY `member`;
     """
+    country = filters.get("country")
+
+    # if isinstance(country, str):
+    #     country = [country] 
 
     mydata = frappe.db.sql(
         sql,

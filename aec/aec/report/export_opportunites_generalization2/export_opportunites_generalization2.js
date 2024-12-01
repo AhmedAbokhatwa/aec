@@ -55,6 +55,14 @@ frappe.query_reports["Export Opportunites Generalization2"] = {
       width: "200px",
     },
     {
+      fieldname: "Clusters",
+      label: __("Clusters"),
+      fieldtype: "Link",
+      options: "Geographical Clusters List",
+      width: "200px",
+    },
+  
+    {
       fieldname: "select",
       label: __("put number of row"),
       fieldtype: "Int",
@@ -110,10 +118,10 @@ frappe.query_reports["Export Opportunites Generalization2"] = {
             var export_value_in_egp = rowData[7];
             var export_value_in_usd = rowData[8];
             var export_volume = rowData[9];
-            var governorate = rowData[10];
-            var customer_status = rowData[11];
-            var ceo_mobile = rowData[12];
-            var email = rowData[13];
+            var governorate = rowData[11];
+            var customer_status = rowData[12];
+            var ceo_mobile = rowData[13];
+            var email = rowData[14];
             console.log("EMAI", export_volume);
             ///////////////////////
             selected_rows.push({
