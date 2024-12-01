@@ -9,7 +9,7 @@ def send_email(name, body):
     # Fetch the document based on 'name'
     doc = frappe.get_doc("Business to Business Meetings", name)
 
-    recipients = [buyer.email for buyer in doc.buyers_info]
+    recipients = [buyer.primary_email for buyer in doc.buyers_info]
     args = doc.as_dict()
     args["message"] = get_message(doc, body)
 
