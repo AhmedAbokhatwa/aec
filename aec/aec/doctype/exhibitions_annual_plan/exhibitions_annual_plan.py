@@ -22,3 +22,7 @@ def make_exhibitions(row):
   exhibition.save()
   frappe.db.commit()
   return exhibition
+
+@frappe.whitelist()
+def create_tranning_annual_reminder(row):
+  return row
