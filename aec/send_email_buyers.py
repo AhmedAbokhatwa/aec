@@ -28,7 +28,7 @@ def send_email(name, body):
 
     frappe.sendmail(**email_args)
     frappe.msgprint(
-        _("Your ....................................Email sent successfully")
+        _("Your Email sent successfully")
     )
 
 
